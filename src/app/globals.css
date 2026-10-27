@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Italiana&family=Tenor+Sans&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Plain White Background Identity */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9F9F8;
+  --bg-tertiary: #F3F3F1;
+  --border-light: #E5E5E3;
+  --border-dark: #111111;
+
+  /* Red, Wine Red, Black & Dark Accents */
+  --wine-red: #6B1226;
+  --wine-red-dark: #520D1D;
+  --wine-red-light: #8A1A33;
+  --crimson-red: #B91C1C;
+  --pure-black: #111111;
+  --charcoal: #222222;
+  --muted-text: #666666;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Tenor Sans', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #111111;
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Indian Rupee Symbol clean rendering across all serif headlines */
+@font-face {
+  font-family: 'RupeeFallback';
+  src: local('Segoe UI'), local('Arial'), local('sans-serif');
+  unicode-range: U+20B9;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, .font-serif {
+  font-family: 'RupeeFallback', 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.font-sans, .nav-text {
+  font-family: 'Tenor Sans', 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
+
+/* Button & Color Classes */
+.bg-wine {
+  background-color: #6B1226;
+}
+
+.bg-wine:hover {
+  background-color: #520D1D;
+}
+
+.text-wine {
+  color: #6B1226;
+}
+
+.border-wine {
+  border-color: #6B1226;
+}
+
+.wine-btn {
+  background-color: #6B1226;
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.wine-btn:hover {
+  background-color: #520D1D;
+}
+
+.black-btn {
+  background-color: #111111;
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.black-btn:hover {
+  background-color: #6B1226;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F3F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4C4C2;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6B1226;
+}
+
+::selection {
+  background-color: #6B1226;
+  color: #FFFFFF;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
